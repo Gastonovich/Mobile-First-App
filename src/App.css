@@ -1,0 +1,65 @@
+.App {
+  text-align: center;
+}
+.App>div{
+  position: absolute;
+  bottom: 0;
+  width: 100%;  
+}
+img{
+  width: 100%;
+}
+
+.calendarBody{
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+  flex-direction: column; 
+  margin-bottom: 5%;
+}
+.calendar{
+  list-style-type: none;
+  padding:0;
+  align-content: center;
+  width: 90%;
+  display: grid; 
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-gap: 6px;
+}
+.day{
+  display: block;
+  border:1px solid black;
+  padding: 6px 0 6px 0;
+}
+.header{
+  display: flex;
+  align-self:center ;
+  justify-content: space-around;  
+  width: 100%; 
+}
+.arrows{
+  display: inline-block;
+    border: none;
+    padding: 1rem 2rem;
+    margin: 0;
+    text-decoration: none;
+    background: transparent;
+    color: black;
+    font-family: sans-serif;
+    font-size: 1rem;
+    cursor: pointer;
+    text-align: center;
+    transition: background 250ms ease-in-out, 
+                transform 150ms ease;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+.monthName{
+  display: flex;
+  align-items: center;
+  font-family: sans-serif;
+  font-size: 1.2rem;
+  justify-content: center;
+  width:30%;
+}
