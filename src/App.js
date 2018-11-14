@@ -104,11 +104,12 @@ class App extends Component {
     ));
     return (
       <div className="App">
+        <div className="header"><h1>SUPER FILM</h1></div>
         {this.state.firstView ? (
-          <div>
+          <div className="initialState">
             <img className="logotype" alt="logo" src={require('./television-tv-png-22274.png')} />
             <div className="calendarBody">
-              <div className="header">
+              <div className="calendarHeader">
                 <button className="arrows" onClick={this.dicrementMonth}>
                   {" "}
                   &lt;{" "}

@@ -41,7 +41,7 @@ class Episode extends Component {
           <div>loading</div>
         ) : (
           <div>
-            <button onClick={this.changeView}>BACK</button>
+            <button className="arrows back_button_to_initial_state" onClick={this.changeView}>&lt;</button>
             <ul className="episodesList">
               {this.state.response.map(item => (
                 <li className="episode" key={item.id}>{item.name}</li>
