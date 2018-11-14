@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import ShowView from "./Components/ShowView";
+import ShowView from "./ShowView";
 
 class Episode extends Component {
   constructor(props) {
@@ -47,7 +47,7 @@ class Episode extends Component {
               className="arrows back_button_to_initial_state"
               onClick={this.changeView}
             >
-              <img alt='back icon' src={require('./Images/back.png')} />
+              <img alt='back icon' src={require('../Images/back.png')} />
             </button>
             <ul className="episodesList">
               {this.state.response.map(item => (

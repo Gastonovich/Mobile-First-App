@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Episodes from "./Episodes";
+import Episodes from "./Components/Episodes";
 import "./App.css";
 
 class App extends Component {
@@ -70,8 +70,11 @@ class App extends Component {
     }
   }
   incrementMonth() {
-    if((this.state.indicatedYear < this.state.currYear)||
-        (this.state.indicatedMonth < this.state.currentMonth && this.state.indicatedYear === this.state.currYear)) {
+    if (
+      this.state.indicatedYear < this.state.currYear ||
+      (this.state.indicatedMonth < this.state.currentMonth &&
+        this.state.indicatedYear === this.state.currYear)
+    ) {
       if (this.state.indicatedMonth < 12) {
         this.setState({ indicatedMonth: this.state.indicatedMonth + 1 });
       } else {
@@ -104,22 +107,26 @@ class App extends Component {
     ));
     return (
       <div className="App">
-        <div className="header"><h1>SUPER FILM</h1></div>
+        <div className="header">
+          <h1>SUPER FILM</h1>
+        </div>
         {this.state.firstView ? (
           <div className="initialState">
-            <img className="logotype" alt="logo" src={require('./television-tv-png-22274.png')} />
+            <img
+              className="logotype"
+              alt="logo"
+              src={require("./Images/television-tv-png-22274.png")}
+            />
             <div className="calendarBody">
               <div className="calendarHeader">
                 <button className="arrows" onClick={this.dicrementMonth}>
-                  {" "}
-                  &lt;{" "}
+                  <img alt="left icon" src={require("./Images/back.png")} />
                 </button>
                 <div className="monthName">
-                {this.state.monthList[this.state.indicatedMonth-1]}
+                  {this.state.monthList[this.state.indicatedMonth - 1]}
                 </div>
                 <button className="arrows" onClick={this.incrementMonth}>
-                  {" "}
-                  &gt;{" "}
+                  <img alt="right icon" src={require("./Images/right-arrow.png")} />
                 </button>
               </div>
               <ul className="calendar">{calendar}</ul>
