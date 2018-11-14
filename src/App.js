@@ -11,8 +11,8 @@ class App extends Component {
       currYear: date.getFullYear(),
       indicatedMonth: date.getMonth(),
       indicatedYear: date.getFullYear(),
-      indicatedDay: 5,
-      firstView: false,
+      indicatedDay: null,
+      firstView: true,
       monthList: [
         "January",
         "February",
